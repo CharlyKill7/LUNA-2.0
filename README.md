@@ -24,7 +24,7 @@ Tanto el envío de WhatsApp como Youtube se ejecutan en ventanas en segundo plan
 
 Cuando escucha la palabra 'tierra', LUNA se esconde y, aunque no deja de oír hasta el cierre completo del programa, desactiva la escucha activa hasta que vuelva a oir "LUNA". 
 
-Además, respecto a la primera versión, se ha incoporado tecnología TTS (Text To Speech) para que LUNA interactúe con el usuario mediante la voz. En caso de querer silenciarla, simplemente hay que decir el comando de voz "silenciar LUNA" y, para activarla de nuevo, "activar voz LUNA". Finalmente podemos cerrar el programa usando el comando "cerrar LUNA".
+Además, respecto a la primera versión, se ha incoporado tecnología TTS (Text To Speech) para que LUNA interactúe con el usuario mediante la voz. En caso de querer silenciarla, simplemente hay que decir el comando de voz "silenciar LUNA" y, para activarla de nuevo, "activar voz LUNA". Finalmente, podemos cerrar el programa usando el comando "cerrar LUNA".
 
 Así funciona, a grandes rasgos, mi pequeño asistente por voz.
 
@@ -33,29 +33,21 @@ Así funciona, a grandes rasgos, mi pequeño asistente por voz.
  
 ## Archivos
 
-1. Archivos principales (ubicados en la carpeta principal LUNA):
+1. Archivos principales (ubicados en la carpeta principal LUNA-2.0):
 
 - <strong>main.py</strong>: script para el reconocimiento de voz y trasncripción.
 - <strong>gui.py</strong>: script para la ventana emergente con la respuesta. 
-- <strong>logo.py</strong>: script para mostrar el logo cuando LUNA se activa.
-- <strong>wap.py</strong>: script para el envío de mensajes de WhatsApp.
-- <strong>you.py</strong>: script para abrir YouTube y poner un vídeo.
-- <strong>chat.py</strong>: script para llamar a la API de OpenAI y usar Chat GPT.
-
 
 2. Carpetas accesorias:
 
-- <strong>notebooks</strong>: contiene diferentes notebooks para pruebas: zmq, chat, micro, PySimpleGUI, pips, etc.
+- <strong>notebooks</strong>: contiene dos notebooks con pruebas: test.ipynb para la librería Threading y voicetest.ipynb para pyttsx3.
 - <strong>img</strong>: contiene dos posibles logos en varios formatos (.png, .ico, .svg).
 - <strong>driver</strong>: contiene la extensión AdBlocker para la librería selenium.
 
-3. Otros archivos:
+3. Otros archivos (también incluidos en la carpeta principal LUNA-2.0):
 
-- <strong>functions.py</strong>: script con funciones.
-- <strong>LUNA.txt</strong>: script para la creación del archivo ejecutable .bat.
-- <strong>LUNA.bat</strong>: archivo ejecutable principal.
-- <strong>LUNA.lnk</strong>: acceso directo al archivo .bat, el ejecutable principal (para colocar donde se requiera).
-- <strong>desktop.ini</strong>: archivo necesario para la creación del acceso directo.
+- <strong>functions.py</strong>: script con funciones utilizadas.
+- <strong>LUNA.bat</strong>: archivo ejecutable para iniciar LUNA.
 
 
  <a name="ejecucion"/>
@@ -66,16 +58,15 @@ Para poner en marcha LUNA, se deben seguir los siguientes pasos:
 
 - Crea un entorno virtual nuevo para el proyeto (opcional).
 - Descarga este repositorio en local.
-- Corre el archivo 'pips.ipynb' para instalar las librerías necesarias (en caso de no tenerlas ya instaladas).
-- Especifica las rutas de guardado de cookies (opciones de Selenium) en 'you.py' y 'wap.py'.
-- Asegúrate de que los puertos especificados para los sockets de ZeroMQ están libres o, en caso contrario, especifica uno nuevo (en todos los archivos principales).
-- Ejecuta los seis archivos principales a la vez, cada uno con su propia terminal.
+- Instala las librerías necesarias (en caso de no tenerlas ya instaladas) usando pip: threading, speech recognition, PyQt5, openai, zmq, pyttsx3, selenium, PySimpleGui y tkinter.
+- Especifica las rutas de guardado de cookies (opciones de Selenium) para Youtube, WhatsApp y Google al principio de 'main.py'.
+- Asegúrate de que los puertos especificados para el socket de ZeroMQ está libres o, en caso contrario, especifica uno nuevo (dentro de def chat, en main.py, y al principio de gui.py).
+- Ejecuta los dos archivos principales a la vez, cada uno con su propia terminal.
 
 En caso de querer hacer un único ejecutable:
 - Desde la terminal, navega hasta la carpeta de proyecto y ejecuta el comando "pyinstaller archivo.py", donde "archivo.py" debe ser remplazado por 'main.py'.
-- Repetir el proceso para los otros cinco archivos. Se crearán dos carpetas nuevas llamadas "build" y "dist", y dentro de ésta última se encuentran los archivos ejecutables creados ('main.exe', 'chat.exe', 'gui.exe', etc), cada uno en una carpeta con su nombre.
-- Doble click en el ejecutable 'LUNA.bat'. En caso de no funcionar, consultar el archivo 'LUNA.txt' y comprobar si las rutas son correctas. En caso de que no lo sean, cambiarlas y después renombrar ese mismo archivo con extensión .bat, convirtiéndolo así en el ejecutable principal.
-- Usar el acceso directo (el que tiene icono) donde se prefiera.
+- Repetir el proceso para gui.py. Se crearán dos carpetas nuevas llamadas "build" y "dist", y dentro de ésta última se encuentran los archivos ejecutables creados ('main.exe' y 'gui.exe'), cada uno en una carpeta con su nombre.
+- Doble click en el ejecutable 'LUNA.bat'. En caso de no funcionar, cambiar la extensión del archivo a .txt y comprobar si las rutas son correctas. En caso de que no lo sean, cambiarlas y después renombrar ese mismo archivo con extensión .bat, convirtiéndolo así en el ejecutable principal.
 
 Y eso es todo.
 
