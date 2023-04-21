@@ -34,7 +34,7 @@ Así funciona, a grandes rasgos, mi pequeño asistente por voz.
  
 ## Archivos
 
-1. Archivos principales (ubicados en la carpeta src):
+1. Archivos principales (ubicados en la carpeta <strong>src</strong>):
 
 - <strong>main.py</strong>: script para el reconocimiento de voz y trasncripción.
 - <strong>gui.py</strong>: script para la ventana emergente con la respuesta. 
