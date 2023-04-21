@@ -18,11 +18,12 @@ Cuando oye la palabra 'LUNA', se activa. El logo de LUNA aparecerá entonces en 
 - Consultas al Chat GPT: comando de voz "consulta" + la consulta que deseas realizar.
 - Envío de mensajes por WhatsApp: comando de voz "whastapp" + "nombre de contacto" + "texto" + "mensaje a enviar".
 - Música o vídeo en YouTube: comando de voz "youtube" + el título del vídeo que buscas.
+- Búsquedas en Google: comando de voz "buscar" + lo que quieres buscar
 - Manejo de aplicaciones de escritorio como Word, Excel o Visual Studio Code: comando de voz "abrir/cerrar + word/excel/visual".
 
-Tanto el envío de WhatsApp como Youtube se ejecutan en ventanas en segundo plano, mientras que la consulta al chat GPT es respondida mediante una ventana emergente con la respuesta en forma de texto, lista para ser copiada. Las aplicaciones de escritorio también se abren en ventanas no minimizadas.
+Tanto el envío de WhatsApp, como Youtube o la búsqueda en Google se ejecutan en ventanas en segundo plano, mientras que la consulta al chat GPT es respondida mediante una ventana emergente con la respuesta en forma de texto, lista para ser copiada. Las aplicaciones de escritorio también se abren en ventanas no minimizadas.
 
-Cuando escucha la palabra 'tierra', LUNA se esconde y, aunque no deja de oír hasta el cierre completo del programa, desactiva la escucha activa hasta que vuelva a oir "LUNA". 
+Cuando escucha la palabra 'tierra', LUNA se esconde y, aunque no deja de oír hasta el cierre completo del programa, desactiva la escucha activa hasta y entra en modo de espera hasta que vuelva a oir "LUNA". 
 
 Además, respecto a la primera versión, se ha incoporado tecnología TTS (Text To Speech) para que LUNA interactúe con el usuario mediante la voz. En caso de querer silenciarla, simplemente hay que decir el comando de voz "silenciar LUNA" y, para activarla de nuevo, "activar voz LUNA". Finalmente, podemos cerrar el programa usando el comando "cerrar LUNA".
 
