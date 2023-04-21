@@ -25,7 +25,7 @@ Tanto el envío de WhatsApp, como Youtube o la búsqueda en Google se ejecutan e
 
 Cuando escucha la palabra 'tierra', LUNA se esconde y, aunque no deja de oír hasta el cierre completo del programa, desactiva la escucha activa hasta y entra en modo de espera hasta que vuelva a oir "LUNA". 
 
-Además, respecto a la primera versión, se ha incoporado tecnología TTS (Text To Speech) para que LUNA interactúe con el usuario mediante la voz. En caso de querer silenciarla, simplemente hay que decir el comando de voz "silenciar LUNA" y, para activarla de nuevo, "activar voz LUNA". Finalmente, podemos cerrar el programa usando el comando "cerrar LUNA".
+Además, respecto a la primera versión, se ha incoporado tecnología TTS (Text To Speech) para que LUNA interactúe con el usuario mediante la voz. En caso de querer silenciarla, simplemente hay que decir el comando de voz "silenciar LUNA" y, para activarla de nuevo, "activar voz LUNA". Finalmente, podemos cerrar el programa usando el comando "cerrar LUNA".  
 
 Así funciona, a grandes rasgos, mi pequeño asistente por voz.
 
