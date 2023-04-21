@@ -34,10 +34,11 @@ Así funciona, a grandes rasgos, mi pequeño asistente por voz.
  
 ## Archivos
 
-1. Archivos principales (ubicados en la carpeta principal LUNA-2.0):
+1. Archivos principales (ubicados en la carpeta src):
 
 - <strong>main.py</strong>: script para el reconocimiento de voz y trasncripción.
 - <strong>gui.py</strong>: script para la ventana emergente con la respuesta. 
+- <strong>functions.py</strong>: script con funciones utilizadas.
 
 2. Carpetas accesorias:
 
@@ -45,9 +46,8 @@ Así funciona, a grandes rasgos, mi pequeño asistente por voz.
 - <strong>img</strong>: contiene dos posibles logos en varios formatos (.png, .ico, .svg).
 - <strong>driver</strong>: contiene la extensión AdBlocker para la librería selenium.
 
-3. Otros archivos (también incluidos en la carpeta principal LUNA-2.0):
+3. Otros archivos (incluidos en la carpeta principal LUNA-2.0):
 
-- <strong>functions.py</strong>: script con funciones utilizadas.
 - <strong>LUNA.bat</strong>: archivo ejecutable para iniciar LUNA.
 
 
