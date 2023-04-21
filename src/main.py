@@ -18,7 +18,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from ps import popenai
+from ..ps import popenai
 from functions import procesar_chat, procesar_mensaje2, procesar_google
 
 options=Options()
